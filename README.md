@@ -11,7 +11,7 @@ Docker packages applications and their dependencies into portable, reproducible 
 
 🥞 **Docker Image Layers:** Each Dockerfile instruction creates a layer. These layers enable caching and incredibly efficient distribution.
 
-📦 **Container:**A running instance of an image. They are lightweight, isolated, and secure.
+📦 **Container:** A running instance of an image. They are lightweight, isolated, and secure.
 
 ☁️ **Docker Hub:** The public registry (like GitHub for Docker) where you push and pull images.
 
@@ -28,12 +28,26 @@ Docker packages applications and their dependencies into portable, reproducible 
 
 🛠️ **Minimal Dockerfile Example**
 Dockerfile
+
+
 FROM node:18-alpine
+
+
 WORKDIR /app
+
+
 COPY package*.json ./
+
+
 RUN npm install
+
+
 COPY . .
+
+
 EXPOSE 3000
+
+
 CMD ["npm","start"]
 
 
